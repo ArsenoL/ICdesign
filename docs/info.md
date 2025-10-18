@@ -9,11 +9,11 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works 
+Flickers light on and off 
 
 ## How to test
 
-Explain how to use your project
+turn on switches one and two, hit reset.
 
 ## External hardware
 
