@@ -1,22 +1,23 @@
-![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/wokwi_test/badge.svg)
+![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg) ![](../../workflows/fpga/badge.svg)
 
-# What is Tiny Tapeout?
+# Tiny Tapeout Verilog Project Template
 
-TinyTapeout is an educational project that aims to make it easier and cheaper than ever to get your digital designs manufactured on a real chip.
+- [Read the documentation for project](docs/info.md)
+
+## What is Tiny Tapeout?
+
+Tiny Tapeout is an educational project that aims to make it easier and cheaper than ever to get your digital and analog designs manufactured on a real chip.
 
 To learn more and get started, visit https://tinytapeout.com.
 
-## Wokwi Projects
+## Set up your Verilog project
 
-Edit the [info.yaml](info.yaml) and change the wokwi_id to the ID of your Wokwi project. You can find the ID in the URL of your project, it's the big number after `wokwi.com/projects/`.
+1. Add your Verilog files to the `src` folder.
+2. Edit the [info.yaml](info.yaml) and update information about your project, paying special attention to the `source_files` and `top_module` properties. If you are upgrading an existing Tiny Tapeout project, check out our [online info.yaml migration tool](https://tinytapeout.github.io/tt-yaml-upgrade-tool/).
+3. Edit [docs/info.md](docs/info.md) and add a description of your project.
+4. Adapt the testbench to your design. See [test/README.md](test/README.md) for more information.
 
-The GitHub action will automatically fetch the digital netlist from Wokwi and build the ASIC files.
-
-## Verilog Projects
-
-Edit the [info.yaml](info.yaml) and uncomment the `source_files` and `top_module` properties, and change the value of `language` to "Verilog". Add your Verilog files to the `src` folder, and list them in the `source_files` property.
-
-The GitHub action will automatically build the ASIC files using [OpenLane](https://www.zerotoasiccourse.com/terminology/openlane/).
+The GitHub action will automatically build the ASIC files using [LibreLane](https://www.zerotoasiccourse.com/terminology/librelane/).
 
 ## Enable GitHub actions to build the results page
 
@@ -27,14 +28,15 @@ The GitHub action will automatically build the ASIC files using [OpenLane](https
 - [FAQ](https://tinytapeout.com/faq/)
 - [Digital design lessons](https://tinytapeout.com/digital_design/)
 - [Learn how semiconductors work](https://tinytapeout.com/siliwiz/)
-- [Join the community](https://discord.gg/rPK2nSjxy8)
+- [Join the community](https://tinytapeout.com/discord)
+- [Build your design locally](https://www.tinytapeout.com/guides/local-hardening/)
 
 ## What next?
 
-- Submit your design to the next shuttle [on the website](https://tinytapeout.com/#submit-your-design). The closing date is **November 4th**.
-- Edit this [README](README.md) and explain your design, how it works, and how to test it.
-- Share your GDS on your social network of choice, tagging it #tinytapeout and linking Matt's profile:
-  - LinkedIn [#tinytapeout](https://www.linkedin.com/search/results/content/?keywords=%23tinytapeout) [matt-venn](https://www.linkedin.com/in/matt-venn/)
+- [Submit your design to the next shuttle](https://app.tinytapeout.com/).
+- Edit [this README](README.md) and explain your design, how it works, and how to test it.
+- Share your project on your social network of choice:
+  - LinkedIn [#tinytapeout](https://www.linkedin.com/search/results/content/?keywords=%23tinytapeout) [@TinyTapeout](https://www.linkedin.com/company/100708654/)
   - Mastodon [#tinytapeout](https://chaos.social/tags/tinytapeout) [@matthewvenn](https://chaos.social/@matthewvenn)
-  - Twitter [#tinytapeout](https://twitter.com/hashtag/tinytapeout?src=hashtag_click) [@matthewvenn](https://twitter.com/matthewvenn)
-
+  - X (formerly Twitter) [#tinytapeout](https://twitter.com/hashtag/tinytapeout) [@tinytapeout](https://twitter.com/tinytapeout)
+  - Bluesky [@tinytapeout.com](https://bsky.app/profile/tinytapeout.com)
